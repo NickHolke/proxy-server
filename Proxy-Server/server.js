@@ -1,7 +1,6 @@
 const express = require('express');
 
 const app = express();
-const bodyParser = require('body-parser');
 const port = 3008;
 
 app.get('/graph/getStocks', (req, res) => {
