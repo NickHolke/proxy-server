@@ -8,6 +8,14 @@ app.get('/graph/getStocks', (req, res) => {
   res.redirect('http://localhost:3001/graph/getStocks');
 })
 
+app.get('/tradestock/api/10', (req,res) => {
+  res.redirect('http://localhost:3002/tradestock/api/10');
+})
+
+app.post('/tradestock/user/deposit', (req,res) => {
+  res.redirect(307, 'http://localhost:3002/tradestock/user/deposit');
+})
+
 app.use(express.static('public'));
 
 
