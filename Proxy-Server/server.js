@@ -24,6 +24,10 @@ app.get('/earnings/getData', (req,res) => {
   res.redirect('http://localhost:3006/earnings/getData')
 })
 
+app.get('/news/getData', (req,res) => {
+  res.redirect('http://localhost:3004/news/getData')
+})
+
 app.post('/tradestock/user/deposit', (req,res) => {
   res.redirect(307, 'http://localhost:3002/tradestock/user/deposit');
 })
