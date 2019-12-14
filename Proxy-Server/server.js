@@ -4,68 +4,57 @@ const app = express();
 const port = 3008;
 
 
-// app.get('/tradestock/api/10', (req,res) => {
-//   res.redirect('http://localhost:3002/tradestock/api/10');
-// })
-
-app.get('/tradestock/api/10', (req,res) => {
-  res.redirect('http://34.214.68.82/tradestock/api/10');
+app.get('/tradestock/api/', (req,res) => {
+  req.query.id = req.query.id || 1;
+  res.redirect(`http://34.214.68.82/tradestock/api/?id=${req.query.id}`);
 })
 
-app.get('/questionMark.png', (req,res) => {
-  res.redirect('http://34.214.68.82/questionMark.png');
+app.get('/questionMark.png', (req, res) => {
+  res.redirect('http://34.214.68.82/questionMark.png')
 })
 
-app.get('/exclamation.png', (req,res) => {
-  res.redirect('http://34.214.68.82/exclamation.png');
+app.get('/exclamation.png', (req, res) => {
+  res.redirect('http://34.214.68.82/exclamation.png')
+})
+
+app.get('/exclamation-button.png', (req, res) => {
+  res.redirect('http://34.214.68.82/exclamation-button.png')
 })
 
 app.get('/arrows.png', (req, res) => {
   res.redirect('http://34.214.68.82/arrows.png')
 })
 
-
-// app.get('/earnings/getData', (req,res) => {
-//   res.redirect('http://localhost:3006/earnings/getData')
-// })
-
-app.get('/earnings/getData', (req,res) => {
-  res.redirect('http://18.219.217.173/earnings/getData')
+app.get('/arrows_black.png', (req, res) => {
+  res.redirect('http://34.214.68.82/arrows_black.png')
 })
 
-// app.get('/graph/getStocks', (req, res) => {
-//   res.redirect('http://localhost:3001/graph/getStocks');
-// })
+app.get('/graph/getStocks', (req, res) => {
+  req.query.id = req.query.id || 1;
+  res.redirect(`http://54.153.91.76/graph/getStocks/?id=${req.query.id}`);
+})
 
-// app.get('/questionMark.png', (req, res) => {
-//   res.redirect('http://localhost:3002/questionMark.png')
-// })
+app.get('/about/getData/', (req,res) => {
+  req.query.id = req.query.id || 1;
+  res.redirect(`http://13.52.245.200/about/getData/?id=${req.query.id}`)
+})
 
-// app.get('/exclamation.png', (req, res) => {
-//   res.redirect('http://localhost:3002/exclamation.png')
-// })
-
-// app.get('/arrows.png', (req, res) => {
-//   res.redirect('http://localhost:3002/arrows.png')
-// })
-
-// app.get('/ratings/getData/1', (req,res) => {
-//   res.redirect('http://localhost:3005/ratings/getData/1');
-// })
-
-// app.get('/about/getData/1', (req,res) => {
-//   res.redirect('http://localhost:3003/about/getData/1')
-// })
+app.get('/ratings/getData/', (req,res) => {
+  req.query.id = req.query.id || 1;
+  res.redirect(`http://54.153.72.27/ratings/getData/?id=${req.query.id}`);
+})
 
 
-// app.get('/news/getData', (req,res) => {
-//   res.redirect('http://localhost:3004/news/getData')
-// })
+app.get('/news/getData', (req,res) => {
+  req.query.id = req.query.id || 1;
+  res.redirect(`http://54.193.67.89/news/getData/?id=${req.query.id}`)
+})
 
 
-// app.post('/tradestock/user/deposit', (req,res) => {
-//   res.redirect(307, 'http://localhost:3002/tradestock/user/deposit');
-// })
+app.get('/earnings/getData', (req,res) => {
+  // req.query.id = req.query.id || 1;
+  res.redirect(`http://54.67.103.66/earnings/getData`)
+})
 
 app.use(express.static('public'));
 
