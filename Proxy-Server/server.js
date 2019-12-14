@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = 3008;
 
-
+// TradeStock/////
 app.get('/tradestock/api/', (req,res) => {
   req.query.id = req.query.id || 1;
   res.redirect(`http://34.214.68.82/tradestock/api/?id=${req.query.id}`);
@@ -29,30 +29,33 @@ app.get('/arrows_black.png', (req, res) => {
   res.redirect('http://34.214.68.82/arrows_black.png')
 })
 
+// Graph //
 app.get('/graph/getStocks', (req, res) => {
   req.query.id = req.query.id || 1;
   res.redirect(`http://54.153.91.76/graph/getStocks/?id=${req.query.id}`);
 })
 
+// About //
 app.get('/about/getData/', (req,res) => {
   req.query.id = req.query.id || 1;
   res.redirect(`http://13.52.245.200/about/getData/?id=${req.query.id}`)
 })
 
+// Ratings //
 app.get('/ratings/getData/', (req,res) => {
   req.query.id = req.query.id || 1;
   res.redirect(`http://54.153.72.27/ratings/getData/?id=${req.query.id}`);
 })
 
-
+// News //
 app.get('/news/getData', (req,res) => {
   req.query.id = req.query.id || 1;
   res.redirect(`http://54.193.67.89/news/getData/?id=${req.query.id}`)
 })
 
-
+// Earnings //
 app.get('/earnings/getData', (req,res) => {
-  // req.query.id = req.query.id || 1;
+  req.query.id = req.query.id || 1;
   res.redirect(`http://54.67.103.66/earnings/getData`)
 })
 

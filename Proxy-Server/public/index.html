@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <header>
+  <head>
     <title>Proxy Server</title>
-  </header>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+  </head>
   <body>
-    <div id="Graph"></div>
-    <div id="Tradestock"></div>
-    <div id="About"></div>
-    <div id="News"></div>
-    <div id="Ratings"></div>
-    <div id="Earnings"></div>
-    <div id="modal-root"></div>
-
-
-    <script src="http://54.153.91.76/main.js"></script> 
-     <script src="http://34.214.68.82/bundle.js"></script>
-     <script src="http://54.67.103.66/bundle.js"></script>
-     <script src="http://54.153.72.27/main.js"></script>
-     <script src="http://54.193.67.89/bundle.js"></script>
-     <script src="http://13.52.245.200/main.js"></script>
+    <div id="all-content">
+      <div id="right-container">
+          <div id="Tradestock"></div>
+      </div>
+      <div id="center-container">
+        <div id="Graph"></div>
+        <div id="About"></div>
+        <div id="News"></div>
+        <div id="Ratings"></div>
+        <div id="Earnings"></div>
+        <div id="modal-root"></div>
+      </div>
+    </div>
     
-    
-    <!-- TradeStock -->
-    <!-- <script src="http://34.214.68.82/bundle.js"></script> -->
+      
 
     <!-- Graph -->
-    <!-- <script src="http://54.153.91.76/main.js"></script> -->
+     <script src="http://54.153.91.76/main.js"></script> 
 
-    <!-- About -->
-    <!-- <script src="http://13.52.245.200/main.js"></script> -->
+     <!-- Tradestock -->
+     <!-- <script src="http://34.214.68.82/bundle.js"></script> -->
+     <script src="http://tradestock.s3-website-us-west-2.amazonaws.com/"></script>
 
-    <!-- News -->
-    <!-- <script src="http://54.193.67.89/bundle.js"></script> -->
+    <!-- Earnings -->
+     <!-- <script src="http://54.67.103.66/bundle.js"></script> -->
+     <script src="https://robinhood-earnings.s3-us-west-1.amazonaws.com/bundle.js"></script>
 
-    <!-- Analyst Ratings -->
-    <!-- <script src="http://54.153.72.27/main.js"></script> -->
+    <!-- Ratings -->
+     <script src="http://54.153.72.27/main.js"></script>
 
-   <!-- Earnings -->
-   <!-- <script src="http://54.67.103.66/bundle.js"></script> -->
+     <!-- News -->
+     <!-- <script src="http://54.193.67.89/bundle.js"></script> -->
+     <script src="https://robinhood-news.s3-us-west-1.amazonaws.com/bundle.js"></script>
 
-    <!-- <script src='http://localhost:3004/bundle.js'></script> -->
+     <!-- About -->
+     <!-- <script src="http://13.52.245.200/main.js"></script> -->
+     <script src="https://jank-about-component.s3-us-west-1.amazonaws.com/main.js"></script>
+    
   </body>
 </html>
