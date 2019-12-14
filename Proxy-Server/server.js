@@ -35,6 +35,14 @@ app.get('/graph/getStocks', (req, res) => {
   res.redirect(`http://54.153.91.76/graph/getStocks/?id=${req.query.id}`);
 })
 
+app.get('/graph/img/:photo', (req, res) => {
+  res.redirect(`http://54.153.91.76/graph/img/${path.basename(req.url)}`)
+})
+
+app.get('/navbar/img/:photo', (req, res) => {
+  res.redirect(`http://54.219.176.99/navbar/img/${path.basename(req.url)}`)
+})
+
 // About //
 app.get('/about/getData/', (req,res) => {
   req.query.id = req.query.id || 1;
@@ -45,6 +53,10 @@ app.get('/about/getData/', (req,res) => {
 app.get('/ratings/getData/', (req,res) => {
   req.query.id = req.query.id || 1;
   res.redirect(`http://54.153.72.27/ratings/getData/?id=${req.query.id}`);
+})
+
+app.get('/ratings/:photo', (req, res) => {
+  res.redirect(`http://54.153.72.27${req.url}`)
 })
 
 // News //
